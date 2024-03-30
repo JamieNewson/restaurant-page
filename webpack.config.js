@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   mode: "development",
-  entry: "./src/index.js",
+  entry: { app: "./src/index.js" },
   devtool: "inline-source-map",
   devServer: {
     static: "./dist",
@@ -21,5 +21,13 @@ module.exports = {
   },
   optimization: {
     runtimeChunk: "single",
+  },
+  module: {
+    rules: [
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: "asset/resource",
+      },
+    ],
   },
 };
