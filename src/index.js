@@ -2,6 +2,22 @@ import home from "./home.js";
 import menu from "./menu.js";
 import contact from "./contact.js";
 
-document.getElementById("content").appendChild(home());
-document.getElementById("content").appendChild(menu());
-document.getElementById("content").appendChild(contact());
+const btns = document.querySelectorAll(".navBtn");
+const content = document.getElementById("content");
+
+btns.forEach((btn) => {
+  btn.addEventListener("click", (event) => {
+    content.innerHTML = "";
+    switch (event.target.id) {
+      case "home":
+        content.appendChild(home());
+        break;
+      case "menu":
+        content.appendChild(menu());
+        break;
+      case "contact":
+        content.appendChild(contact());
+        break;
+    }
+  });
+});
