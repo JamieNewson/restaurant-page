@@ -1,6 +1,7 @@
 import home from "./home/home.js";
 import menu from "./menu/menu.js";
 import contact from "./contact/contact.js";
+import "./styles.css";
 
 const btns = document.querySelectorAll(".navBtn");
 const content = document.getElementById("content");
