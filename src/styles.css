@@ -1,10 +1,10 @@
 @font-face {
   font-family: "BebasNeue";
-  src: url(./BebasNeue.woff2) format("woff2");
+  src: url(./fonts/BebasNeue.woff2) format("woff2");
 }
 @font-face {
   font-family: "Arvo";
-  src: url(./Arvo-Regular.woff2) format("woff2");
+  src: url(./fonts/Arvo-Regular.woff2) format("woff2");
 }
 
 * {
